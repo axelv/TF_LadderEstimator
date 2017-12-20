@@ -16,7 +16,7 @@ As the decoder is the encoders counterpart, it consists equivalently of four par
 - batch normalization
 - activation
 
-The order of layers and their size fully parametrized! However, the convolutional layers are automatically padded with zeros to prevent deconvolution artifacts [Deconvolution and Checkerboard Artifacts](https://distill.pub/2016/deconv-checkerboard/)
+The order of layers and their size fully parametrized! However, the convolutional layers are automatically padded with zeros to prevent deconvolution artifacts [Deconvolution and Checkerboard Artifacts - A Odena, V Dumoulin, C Olah](https://distill.pub/2016/deconv-checkerboard/)
 
 A nice intro on Ladder Networks is available on YouTube: 
 - <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZlyqNiPFu2s
