@@ -1,9 +1,9 @@
 # TensorFlow LadderEstimator
-This project contains a TensorFlow implementation of the Ladder Network. The model is written conform the Estimator API which is easy to use.
+This project contains a TensorFlow implementation of the Ladder Network. The model is written conform the [Estimator API](https://www.tensorflow.org/programmers_guide/estimators), an easy to use interface provided by TensorFlow.
 ## Ladder Networks
-Ladder Networks are a structure of neural networks that allow to be trained with few labeled data. Simply explained they consist of a classical feedforward network combinded with a deep autoencoder.
+Ladder Networks are a structure of neural networks that allow to be trained with few labeled data. In other words, Ladder Networks provide a way to do semi-supervised learning with deep neural networks. Given a feedforward network the Ladder Network is constructed by creating the inverse network and requiring to reconstruct the input from the output similar to autoencoders.
 
-The concept of Ladder Networks can be generalized to all kinds of neural networks. However, in this project only fully connected, convolutional, meanpool and maxpool variants are implemented. Each layer of the encoder part (the feedforward network) consists of four parts:
+The concept of Ladder Networks can be used in all kinds of feedforward neural networks or even recurrent networks. However, in this project only fully connected, convolutional, meanpool and maxpool variants are implemented. Each layer of the encoder part (the feedforward network) consists of four parts:
 
 - noise addition layer
 - transformation (fc/conv/pool) layer
@@ -16,7 +16,7 @@ As the decoder is the encoders counterpart, it consists equivalently of four par
 - batch normalization
 - activation
 
-The order of layers and their size fully parametrized! However, the convolutional layers are automatically padded with zeros to prevent deconvolution artifacts [Deconvolution and Checkerboard Artifacts - A Odena, V Dumoulin, C Olah](https://distill.pub/2016/deconv-checkerboard/)
+The order of layers and their size fully parametrized. This makes them fully customable! However, the convolutional layers are automatically padded with zeros to prevent deconvolution artifacts [Deconvolution and Checkerboard Artifacts - A Odena, V Dumoulin, C Olah](https://distill.pub/2016/deconv-checkerboard/)
 
 A nice intro on Ladder Networks is available on YouTube: 
 - <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZlyqNiPFu2s
